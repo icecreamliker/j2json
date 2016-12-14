@@ -18,7 +18,8 @@
   "author": "Lee Yao <yaoli111144@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "glob": "^7.1.1"
+    "glob": "^7.1.1",
+    "json.sortify": "^2.0.2"
   },
   "devDependencies": {
     "tap": "^8.0.1"
