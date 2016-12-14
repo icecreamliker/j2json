@@ -1,0 +1,26 @@
+{
+  "name": "j2json",
+  "version": "0.0.1",
+  "description": "A formatter to sort the keys of JSON files",
+  "keywords": [
+    "json",
+    "sort",
+    "formatter"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "tap __tests__/*.js --cov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icecreamliker/j2json"
+  },
+  "author": "Lee Yao <yaoli111144@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.1.1"
+  },
+  "devDependencies": {
+    "tap": "^8.0.1"
+  }
+}
