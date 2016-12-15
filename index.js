@@ -11,7 +11,8 @@ function sortJSON(file, dest) {
     if (err) {
       throw err;
     }
-    console.log(jsonSortify(JSON.parse(data), null, 2));
+    let content = jsonSortify(JSON.parse(data), null, 2);
+    fs.writeFileSync(file, content);
   });
 }
 
@@ -32,9 +33,7 @@ let j2json = function(options, callback) {
 
     files.forEach((file) => {
       console.log(file);
-      if (!path.isAbsolute(dest) && cwd) {
-        dest = path.join(cwd, dest);
-      }
+      dest = path.resolve(cwd, dest);
       sortJSON(file, dest);
     });
   }
