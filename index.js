@@ -20,6 +20,7 @@ let j2json = function(options, callback) {
   let cwd = options.cwd;
   let src = options.src;
   let dest = options.dest;
+  let grep = options.grep;
   let fileList = [];
 
   for (let i = 0, len = src.length; i < len; i++) {
@@ -32,6 +33,9 @@ let j2json = function(options, callback) {
     Array.prototype.push.apply(fileList, files);
 
     files.forEach((file) => {
+      if(!grep.test(file)) {
+        return;
+      }
       console.log(file);
       dest = path.resolve(cwd, dest);
       sortJSON(file, dest);
