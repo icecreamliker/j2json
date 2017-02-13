@@ -3,10 +3,11 @@
 const j2json = require('../index');
 
 j2json({
-    cwd: '/Users/yaolee/Desktop/unitedstack/j2json/examples',
+    cwd: './',
     src: ['./files/'],
+    grep: /.lang./,
     dest: './dest/'
   },
-  function() {
-
+  function(filelist) {
+    console.log('Done!');
   });
